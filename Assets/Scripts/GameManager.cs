@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : EvidenceFolderScript
 {
+    private int evidence;
     public static GameManager Instance
     {
         get
@@ -30,20 +31,12 @@ public class GameManager : EvidenceFolderScript
 
     public void EndCase()
     {
-        if (evidence == 0)
+        if (evidence >= 0 && evidence <= 2)
         {
-            SceneManager.LoadScene("Outcome1");
+            SceneManager.LoadScene($"Outcome{evidence + 1}");
         }
-        else if (evidence == 1)
-        {
-            SceneManager.LoadScene("Outcome2");
-        }
-        else if (evidence == 2)
-        {
-            SceneManager.LoadScene("Outcome3");
-        }
-
     }
+
 
     public void LivingRoom()
     {

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EvidenceFolderScript : MonoBehaviour
 {
-    public int evidence = 0;
+    public int evidence;
 
     public void AddEvidenceNo(int number)
     {
