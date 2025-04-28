@@ -40,7 +40,7 @@ public class GameManager : EvidenceFolderScript
         }
         else if (evidence == 2)
         {
-            SceneManager.LoadScene("Outcome2");
+            SceneManager.LoadScene("Outcome3");
         }
 
     }
@@ -58,5 +58,10 @@ public class GameManager : EvidenceFolderScript
     public void HiddenRoom()
     {
         SceneManager.LoadScene("HiddenRoom");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

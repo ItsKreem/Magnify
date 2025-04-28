@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HiddenRoom.unity
     guid: 47256d78997de0e4397582eb5d00696f
+  - enabled: 1
+    path: Assets/Scenes/Outcome1.unity
+    guid: 8b536e70ef8a51e47b42e370875456b9
+  - enabled: 1
+    path: Assets/Scenes/Outcome2.unity
+    guid: b17cdbcdfe5872741b6b233a3294a173
+  - enabled: 1
+    path: Assets/Scenes/Outcome3.unity
+    guid: 4833ef236c92e6a428eea121eec03f31
   m_configObjects: {}
