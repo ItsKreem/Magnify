@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : EvidenceFolderScript
 {
     public static GameManager Instance
     {
         get
         {
-            if(m_Instance == null)
+            if (m_Instance == null)
             {
-                m_Instance = (GameManager) FindObjectOfType(typeof(GameManager));
+                m_Instance = (GameManager)FindObjectOfType(typeof(GameManager));
 
-                if(m_Instance == null )
+                if (m_Instance == null)
                 {
                     GameObject go = new GameObject();
                     go.name = "GAMEMANAGER";
@@ -28,15 +28,23 @@ public class GameManager : MonoBehaviour
 
     private static GameManager m_Instance = null;
 
-    public void StartGame()
+    public void EndCase()
     {
-        SceneManager.LoadScene("MainGame");
+        if (evidence == 0)
+        {
+            SceneManager.LoadScene("Outcome1");
+        }
+        else if (evidence == 1)
+        {
+            SceneManager.LoadScene("Outcome2");
+        }
+        else if (evidence == 2)
+        {
+            SceneManager.LoadScene("Outcome2");
+        }
+
     }
 
-    public void Death()
-    {
-        SceneManager.LoadScene("Death");
-    }
     public void LivingRoom()
     {
         SceneManager.LoadScene("LivingRoom");
@@ -50,15 +58,5 @@ public class GameManager : MonoBehaviour
     public void HiddenRoom()
     {
         SceneManager.LoadScene("HiddenRoom");
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

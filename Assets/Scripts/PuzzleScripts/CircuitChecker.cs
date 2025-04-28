@@ -14,7 +14,6 @@ public class CircuitChecker : MonoBehaviour
         {
             MovementButtonOld.SetActive(false);
             MovementButtonNew.SetActive(true);
-            DontDestroyOnLoad(MovementButtonNew);
         }
     }
 }

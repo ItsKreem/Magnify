@@ -84,7 +84,7 @@ public class SafeScript : EvidenceFolderScript
     {
         yield return new WaitForSecondsRealtime(delay);
         SafePanel.SetActive(false);
-        Panel.SetActive(false);
+        Panel.SetActive(true);
         SolvedText.SetActive(true);
         solved = true;
     }
